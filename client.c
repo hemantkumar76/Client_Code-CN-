@@ -31,5 +31,14 @@ int main()
         exit(EXIT_FAILURE);
     }
 
+
+        // Send message to server
+    strcpy(message, "Hello, server!");
+    send(sockfd, message, strlen(message), 0);
+
+    // Close the socket
+    close(sockfd);
+
+
     return 0;
 }
